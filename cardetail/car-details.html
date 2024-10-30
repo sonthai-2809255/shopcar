@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết xe</title>
+    <link rel="stylesheet" href="oto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+</head>
+<body>
+
+    <section class="car-details">
+        <div class="container">
+            <div class="left">
+                <div class="item">
+                    <div class="main-image">
+                        <button class="arrow left-arrow" onclick="prevImage()">&#10094;</button>
+                        <img id="large-image" src="car1.jpg" alt="Hình ảnh xe lớn">
+                        <button class="arrow right-arrow" onclick="nextImage()">&#10095;</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="thumbnail-images">
+                        
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Thông số kĩ thuật</h3>
+                    <div class="description-container"> <!-- Thêm div bao quanh phần mô tả -->
+                        <h1>Tổng quan</h1>
+                        <div class="overview">
+                            <!-- Thông tin tổng quan -->
+                            <div class="overview-item">
+                                <strong>Hãng xe:</strong> <span id="car-manufacturer"></span>
+                            </div>
+                            <div class="overview-item">
+                                <strong>Dòng xe:</strong> <span id="car-model"></span>
+                            </div>
+                            <div class="overview-item">
+                                <strong>Phiên bản:</strong> <span id="car-version"></span>
+                            </div>
+                            <div class="overview-item">
+                                <strong>Năm sản xuất:</strong> <span id="car-year-overview"></span>
+                            </div>
+                            <div class="overview-item">
+                                <strong>Kiểu dáng:</strong> <span id="car-type"></span>
+                            </div>
+                            <div class="overview-item">
+                                <strong>Xuất xứ:</strong> <span id="car-origin"></span>
+                            </div>
+                        </div>
+                        <h1>Thông số động cơ</h1>
+                        <div class="overview">
+                            <!-- Thông tin động cơ -->
+                        </div>
+                        <h1>Kích thước trọng lượng</h1>
+                        <div class="overview">
+                            <!-- Thông tin kích thước -->
+                        </div>
+                        <h1>Phanh</h1>
+                        <div class="overview">
+                            <!-- Thông tin phanh -->
+                        </div>
+                        <h1>Mâm & Vành xe</h1>
+                        <div class="overview">
+                            <!-- Thông tin mâm và vành -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <h3>Mô tả</h3>
+                    <div class="description-container"> <!-- Thêm div bao quanh phần mô tả -->
+                        <p id="car-description" class="description"></p> <!-- Thêm phần mô tả tại đây -->
+                        <button id="toggle-description" class="toggle-btn">Xem thêm</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item-right">
+                <div class="car-info">
+                    <h2 id="car-title" style="text-align: center;"></h2>
+                    <p><strong></strong> <span id="car-price" class="price-large"></span></p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <strong>
+                                <img src="images1/year.svg" class="my-svg" alt="Năm sản xuất"> 
+                                Năm sản xuất:
+                            </strong>
+                            <span class="font-semibold" id="car-year"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <strong>
+                                <img src="images1/fuel.svg" class="my-svg" alt="Nhiên liệu"> 
+                                Nhiên liệu:
+                            </strong>
+                            <span class="font-semibold" id="car-power"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <strong>
+                                <img src="images1/mileage.svg" class="my-svg" alt="Số km"> 
+                                Số km:
+                            </strong>
+                            <span class="font-semibold" id="car-km"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <strong>
+                                <img src="images1/seatCapacity.svg" class="my-svg" alt="Số chỗ ngồi"> 
+                                 Số chỗ ngồi:
+                            </strong>
+                            <span class="font-semibold" id="car-seat"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <strong>
+                                <img src="images1/transmission.svg" class="my-svg" alt="Hộp số"> 
+                                Hộp số:
+                            </strong>
+                            <span class="font-semibold" id="car-hs"></span>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

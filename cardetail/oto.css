@@ -1,0 +1,240 @@
+
+/* Container chính chứa toàn bộ nội dung */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Đảm bảo nội dung sẽ tự xuống dòng nếu không đủ không gian */
+    padding: 50px; /* Thêm padding để tạo khoảng cách với màn hình */
+}
+
+/* Bố cục cho phần bên trái chứa tất cả các mục 'item' */
+.left {
+    display: flex;
+    flex-direction: column; /* Sắp xếp các 'item' theo chiều dọc */
+    flex: 1;
+    max-width: 60%; /* Chiếm 60% màn hình cho màn hình lớn */
+}
+
+/* Mỗi 'item' sẽ được hiển thị toàn bộ trong cột bên trái */
+.item {
+    margin-bottom: 20px;
+}
+
+/* Bố cục cho phần bên phải chứa thông tin chi tiết */
+.item-right {
+    flex: 1;
+    max-width: 35%; /* Chiếm 35% màn hình cho màn hình lớn */
+    padding-right: 25px;
+    margin-right: 25px; /* Khoảng cách bên phải */
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Điều chỉnh hình ảnh chính */
+.main-image img {
+    width: 100%; /* Đảm bảo hình ảnh luôn chiếm 100% chiều rộng của khung */
+    max-height: 439px; /* Giới hạn chiều cao tối đa nếu cần */
+    object-fit: cover; /* Đảm bảo hình ảnh được cắt hoặc phóng to vừa với khung mà không biến dạng */
+    border-radius: 15px; /* Bo tròn góc cho hình ảnh */
+}
+
+/* CSS cho mũi tên */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.main-image {
+    position: relative;
+}
+
+/* Bố cục cho ảnh nhỏ */
+.thumbnail-images {
+    display: flex;
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Hiệu ứng khi hover */
+}
+
+.thumbnail:hover {
+    transform: scale(1.1); /* Tăng kích thước khi hover */
+}
+
+/* Đặt kích thước SVG và điều chỉnh bố cục trong thông tin xe */
+.my-svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.car-info {
+    font-size: 20px;
+    border: 1px solid #d3d0d0e4;
+    color: #31406f;
+    margin: 15px 0; /* Giảm margin trên và dưới */
+    border-radius: 15px;
+    width: 100%;
+    padding: 20px; /* Có thể điều chỉnh tùy theo sở thích */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+}
+.car-info div {
+    padding-top: 20px;
+    display: flex; /* Sử dụng flexbox để bố trí */
+    justify-content: space-between; /* Giữ khoảng cách giữa nhãn và giá trị */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-bottom: 10px; /* Khoảng cách giữa các dòng */
+}
+.price-large {
+    font-size: 40px; /* Tăng kích cỡ giá */
+    color: #EF4C49;       /* Đặt màu đỏ cho giá */
+    text-align: right;
+}
+.font-semibold {
+    font-weight: 600; /* Tạo chữ đậm */
+    font-size: 20px;
+}
+.description-container {
+    border: 1px solid #ccc; /* Viền xung quanh phần mô tả */
+    border-radius: 15px; /* Bo góc viền */
+    padding: 10px; /* Khoảng cách bên trong */
+    margin-top: 10px; /* Khoảng cách với phần trên */
+}
+
+.toggle-btn {
+    font-size: 20px;
+    display: block;
+    padding: 8px 16px;
+    width: 100%;
+    margin: 16px auto; /* Căn giữa nút */
+    margin-top: 10px; /* Khoảng cách giữa mô tả và nút */
+    cursor: pointer; /* Con trỏ thay đổi khi di chuột lên nút */
+    background-color: #EDEFF5; /* Màu nền nút */
+    color: rgb(110, 159, 227); /* Màu chữ */
+    border: none; /* Không có viền cho nút */
+    border-radius: 4px; /* Bo góc nút */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu khi hover */
+}
+
+.toggle-btn:hover {
+    background-color: #bdd7f4; /* Màu nền khi hover */
+}
+.description {
+    /*border: 1px solid #d3d0d0e4;*/
+    border-radius: 15px;
+    max-height: 200px; /* Giới hạn chiều cao ban đầu */
+    overflow: hidden; /* Ẩn phần thừa */
+    transition: max-height 0.3s ease; /* Hiệu ứng khi thay đổi chiều cao */
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.description.expanded {
+    max-height: 500px; /* Chiều cao khi mở rộng */
+}
+
+
+/* Tăng kích thước chữ trong phần thông tin xe */
+.car-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+h1{
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 20px;
+}
+.overview {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các item xuống dòng nếu không đủ không gian */
+}
+
+
+.overview-item {
+    display: flex; /* Thay đổi thành flex để căn chỉnh nhãn và giá trị */
+    justify-content: space-between; /* Căn giữa nhãn và giá trị */
+    flex: 1 1 50%; /* Mỗi item chiếm 50% chiều rộng, có thể điều chỉnh theo ý muốn */
+    padding: 10px; /* Khoảng cách bên trong */
+    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước của item */
+}
+
+/* Tùy chọn để căn giữa nội dung bên trong */
+.overview-item strong {
+    margin-right: 10px; /* Khoảng cách giữa nhãn và giá trị */
+}
+
+/* Thay đổi để giá trị xuống dòng khi màn hình nhỏ */
+@media (max-width: 600px) {
+    .overview-item {
+        flex-direction: column; /* Đặt chiều dọc cho các item khi màn hình nhỏ */
+        align-items: flex-start; /* Căn lề trái */
+    }
+}
+
+/* Màn hình từ 768px trở xuống (máy tính bảng) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Thay đổi bố cục thành cột khi màn hình nhỏ */
+        gap: 10px;
+        padding: 5px;
+    }
+
+    .left {
+        max-width: 100%; /* Chiếm 100% chiều rộng */
+    }
+
+    .item-right {
+        max-width: 100%; /* Chiếm 100% chiều rộng */
+        order: 2;
+    }
+
+    .thumbnail-images {
+        display: none; /* Ẩn phần hình ảnh thu nhỏ trên màn hình nhỏ */
+    }
+}
+
+/* Màn hình từ 480px trở xuống (điện thoại) */
+@media (max-width: 480px) {
+    .thumbnail-images {
+        flex-wrap: wrap; /* Đặt các hình ảnh thumbnail theo dòng nếu không đủ không gian */
+    }
+
+    .thumbnail {
+        width: 60px; /* Giảm kích thước hình thu nhỏ */
+        height: 60px;
+    }
+
+    .main-image img {
+        max-height: 300px; /* Giảm chiều cao hình ảnh chính cho điện thoại */
+        object-fit: contain; /* Đảm bảo hình ảnh không bị cắt trên màn hình nhỏ */
+    }
+
+    .car-info p {
+        font-size: 1rem; /* Giảm kích thước chữ để phù hợp với màn hình nhỏ */
+    }
+}

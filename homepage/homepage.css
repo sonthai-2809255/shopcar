@@ -1,0 +1,164 @@
+*{
+   box-sizing: border-box;
+}
+/*thiết lập lớp màu chính cho trang web  */
+:root {
+   --primary-color: #1a1a1a;
+   --secondary-color: #gold;
+   --font-color: #c1a87d;
+}
+
+body{
+   padding: auto;/*ngam dinh khong can chinh noi dung*/
+   margin: 0 auto;/*ngam dinh khong can le*/
+   background-color: white;
+}
+header{
+   background: var(--primary-color);
+   min-height: 200px;/*dat chieu dai toi thieu cua header*/
+}
+  
+.top-head { 
+   display: flex;/*các phần tử tự động căn chỉnh ra giữa theo trái,phải và trên, dưới */
+   align-items: center;
+   justify-content: space-between;/* cách đều giữa các phần tử*/
+   padding: 10px 20px;
+}
+.logo {
+   font-size: 30px;
+   color:var(--font-color);
+}
+.search-bar {
+   flex:1 1 40%;/* thiết lập độ rộng thanh search là 40% nav1 và có thể co lại nếu thiếu khoảng trống và giãn ra nến thừa khoảng trống */
+   padding: 0 40px;
+}
+.search-bar input {
+   width: 100%;
+   padding: 12px 20px;
+   border: none;
+   border-radius: 25px;
+   background: white;
+}
+
+.account {
+   position: relative;
+   font-size:30px;
+   color: var(--font-color);
+   border-radius:50%;/* cat vien theo hinh tron*/
+   
+}
+nav ul{
+   display:flex;/*hien thi noi dung trong ul theo chieu ngang*/
+   justify-content: center;/* can chinh noi dung chinh giua*/
+   list-style-type: none;
+   gap:2rem;/*khoang cach giua cac phan tu */
+   margin-top:20px;
+   padding:0;
+}
+
+nav li a{
+   padding: 12px;
+   color:black;
+   background-color: var(--font-color);
+   border-radius: 15px;
+   text-transform: uppercase;/*chuyen tat ca ki tu thanh chu hoa*/
+   text-decoration: none;
+   cursor: pointer;/*chuyen ngoai hinh con tro */
+
+}
+nav li a:hover{
+   background-color: rgb(219, 164, 64);
+   color: #1a1a1a;
+}
+
+.main{
+   position:relative;
+   padding:5px;
+   height: 80%;/**/
+}
+.main img{
+   width: 100%;
+   max-height:300px;
+   object-fit: cover;/**/
+   object-position: center;/**/
+   border-radius: 3px;
+}
+.slide_show{
+   overflow: hidden;/*hien thi noi dung vua khung hinh*/
+}
+.list-img{
+   width:100%;
+   height:15%;
+   display: flex;
+   justify-content: space-between;/*cach deu cac phan tu */
+}
+.list-img div{
+   flex:1;/**/
+}
+img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+   border-radius: 2px;
+}
+button{
+   cursor: pointer; 
+   background: none;
+   border:none;
+
+}
+.active{
+   padding:5px;
+}
+ div.baner{
+   margin:5px;
+   border-radius: 5px;
+   height: 400px;
+   background: var(--primary-color);
+   color: #c1a87d;
+}
+.baner h1{
+   font-family: 'Pacifico', cursive;
+   font-size:50px;
+}
+.container-fluid div.show{
+   display: flex;
+   flex-direction:column;
+   align-items: center;
+   padding: 20px;
+   background-color: #fff;
+   margin-top: 20px;
+   border-radius: 8px;
+   font-family: 'Playfair Display', serif;
+
+ }
+ footer{
+    background-color:var(--primary-color);
+    background-size: 100% auto;
+    color:white;
+    height: 300px;
+    clear: both;
+ }
+ 
+ .select{
+   flex: 1;
+   max-width: 150px;
+ }
+
+ .list-brand {
+   display: flex;
+   gap: 20px;
+   margin-top: 15px;
+ }
+.select img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+  }
+  
+.select:hover img {
+      transform: scale(1.1);
+  }

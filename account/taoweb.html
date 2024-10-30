@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đăng Nhập và Đăng Ký</title>
+    <link rel="stylesheet" href="baitaplon.css" >
+</head>
+<body>
+    
+    <div class="container">
+        <div id="loginForm">
+            <h2>Đăng Nhập</h2>
+            <form onsubmit="return handleLogin(event)">
+                <label for="username">Tên đăng nhập </label>
+                <input type="text" id="loginUsername" required><br>
+                <label for="password">Nhập mật khẩu</label>
+                <input type="password" id="loginPassword" required><br>
+                <button type="submit">Đăng nhập</button>
+
+            </form>
+            <div class="toggle-link">
+                <p>Chưa có tài khoản? <a href="#" onclick="showRegister()">Đăng ký ngay</a></p>
+            </div>
+        </div>
+
+        <div id="registerForm" style="display:none;">
+            <h2>Đăng Ký</h2>
+            <form onsubmit="return handleRegister(event)">
+                <label for="username">Tên đăng ký:</label>
+                <input type="text" id="registerUsername" required><br>
+            
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="registerPassword" required><br>
+            
+                <label for="confirmPassword">Nhập lại mật khẩu:</label>
+                <input type="password" id="confirmPassword" required><br>
+            
+                <button type="submit">Đăng ký</button>
+            </form>
+            <div class="toggle-link">
+                <p>Đã có tài khoản? <a href="#" onclick="showLogin()">Đăng nhập</a></p>
+            </div>
+        </div>
+
+        <div class="message" id="message"></div>
+    </div>
+
+    <script type="text/javascript"src="baitaplon.js">
+        
+    </script>
+
+</body>
+</html>
