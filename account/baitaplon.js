@@ -15,6 +15,11 @@ function handleLogin(event) {
     
         var username = document.getElementById('loginUsername').value;
         var password = document.getElementById('loginPassword').value;
+         // Kiểm tra xem tên đăng nhập có chứa chỉ chữ cái hay không
+    if (!/^[a-zA-Z]+$/.test(username)) {
+        document.getElementById('message').textContent = 'Tên đăng nhập phải chỉ chứa chữ cái!';
+        return;
+    }
     
         // Lấy tài khoản đã đăng ký từ localStorage
         var registeredUsername = localStorage.getItem('registeredUsername');
@@ -29,7 +34,8 @@ function handleLogin(event) {
     
             // Chuyển hướng đến trang chủ sau khi đăng nhập thành công
             setTimeout(function() {
-                window.location.href = 'homepage.html'; // Đường dẫn tới trang chủ
+                window.location.href = '/homepage/homepage.html';
+                // Đường dẫn tới trang chủ
             }, 1000);
         } else {
             document.getElementById('message').textContent = 'Sai tên đăng nhập hoặc mật khẩu!';
@@ -44,6 +50,11 @@ function handleRegister(event) {
         var username = document.getElementById('registerUsername').value;
         var password = document.getElementById('registerPassword').value;
         var confirmPassword = document.getElementById('confirmPassword').value;
+        // Kiểm tra xem tên đăng nhập có chứa chỉ chữ cái hay không
+    if (!/^[a-zA-Z]+$/.test(username)) {
+        document.getElementById('message').textContent = 'Tên đăng nhập phải chỉ chứa chữ cái!';
+        return;
+    }
     
         // Kiểm tra xem mật khẩu và nhập lại mật khẩu có trùng khớp hay không
         if (password !== confirmPassword) {

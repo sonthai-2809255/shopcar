@@ -9,6 +9,7 @@
 }
 
 body{
+   font-family: Arial, Helvetica, sans-serif;
    padding: auto;/*ngam dinh khong can chinh noi dung*/
    margin: 0 auto;/*ngam dinh khong can le*/
    background-color: white;
@@ -26,7 +27,16 @@ header{
 }
 .logo {
    font-size: 30px;
+}
+.fa-car,.fa-user{
    color:var(--font-color);
+}
+
+button{
+   cursor: pointer; 
+   background: none;
+   border:none;
+
 }
 .search-bar {
    flex:1 1 40%;/* thiết lập độ rộng thanh search là 40% nav1 và có thể co lại nếu thiếu khoảng trống và giãn ra nến thừa khoảng trống */
@@ -102,12 +112,6 @@ img{
    object-position: center;
    border-radius: 2px;
 }
-button{
-   cursor: pointer; 
-   background: none;
-   border:none;
-
-}
 .active{
    padding:5px;
 }
@@ -133,14 +137,6 @@ button{
    font-family: 'Playfair Display', serif;
 
  }
- footer{
-    background-color:var(--primary-color);
-    background-size: 100% auto;
-    color:white;
-    height: 300px;
-    clear: both;
- }
- 
  .select{
    flex: 1;
    max-width: 150px;
@@ -162,3 +158,82 @@ button{
 .select:hover img {
       transform: scale(1.1);
   }
+  footer{
+   background-color: #073f73;
+   color: #f7f7f7;
+   font-size: 20px;
+   padding-top: 50px;
+}
+.footer-content{
+   display: flex;
+   justify-content: space-between;
+   text-align: justify;
+}
+
+li a{
+   color: #f7f7f7; 
+   text-decoration: none;
+}
+ul{
+   list-style-type: none;
+}
+.item1{
+   flex: 0.25;
+   padding: 10px;
+}
+.item1 img{
+   padding: 20px;
+   margin: 10px;
+}
+.item1 p{
+   padding: 20px;
+   margin-right: 50px;
+}
+.item2{
+   flex: 0.75;
+   margin: 10px 50px;
+   padding: 20px;
+   line-height: 50px;
+   align-items: center;
+   border-bottom: 3px solid rgb(50, 50, 223);
+}
+.gmail{
+   padding: 12px 16px;
+   font-size: 40px;
+}
+.gmail input{
+   background-color: #121212;
+   border-radius: 10px;
+   padding: 12px 16px;
+   font-size: 20px;
+}
+.gmail button{
+   border-radius: 10px;
+   background-color: #1a6fb7;
+   color: #ffffff;
+   padding: 12px 16px;
+   font-size: 20px;
+}
+.itemlink{
+   display: flex;
+   justify-content: space-between;
+}
+.link1{
+   flex: 0.25;
+   padding: 5px;
+}
+.link2{
+   flex: 0.25;
+   padding: 5px;
+}
+.link3{
+   flex: 0.25;
+   padding: 5px;
+}
+.link4{
+   flex: 0.25;
+   padding: 5px;
+}
+.footer-end{
+   text-align: center;
+}
